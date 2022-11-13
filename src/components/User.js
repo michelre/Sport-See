@@ -2,24 +2,24 @@ import { useParams } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import Api from '../api/api'
 
-function Performance (){
-    const [performance, setPerformance] = useState({})
+function User (){
+    const [user, setUser] = useState({})
     let {userId} = useParams()
-   console.log(performance)
+   console.log(user)
     useEffect(() => {
         const api = new Api();
-        api.getPerformance(userId).then((data) => {
-          setPerformance(data)
+        api.getUser(userId).then((data) => {
+          setUser(data)
         })
       },
       [userId]
     )
     return(
 <div>    
-  <h1 className="listing-title"> {JSON.stringify(performance.data)}
+  <h1 className="listing-title"> {JSON.stringify(user.userInfos)}
 </h1>
 </div>
     );
 }
 
-export default Performance
+export default User
