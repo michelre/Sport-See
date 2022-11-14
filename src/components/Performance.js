@@ -5,9 +5,9 @@ import Api from '../api/api'
 function Performance (){
     const [performance, setPerformance] = useState({})
     let {userId} = useParams()
-   console.log(performance)
+   console.log(performance.data)
     useEffect(() => {
-        const api = new Api();
+        const api = new Api()
         api.getPerformance(userId).then((data) => {
           setPerformance(data)
         })
@@ -16,7 +16,7 @@ function Performance (){
     )
     return(
 <div>    
-  <h1 className="listing-title"> {JSON.stringify(performance.data)}
+  <h1 className="listing-title"> {performance.data}
 </h1>
 </div>
     );

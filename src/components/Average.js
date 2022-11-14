@@ -16,7 +16,7 @@ function Average (){
     )
     return(
 <div>    
-  <h1 className="listing-title"> {JSON.stringify(average.sessions)}
+  <h1 className="listing-titgle"> {JSON.stringify(average.sessions)}
 </h1>
 </div>
     );
