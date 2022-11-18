@@ -14,9 +14,9 @@ function Performance (){
       },
       [userId]
     )
-    return(
-<div>    
-  <h1 className="listing-title"> {performance.data}
+    return performance.data && (
+<div>
+  <h1 className="listing-title"> {performance.data.userId}
 </h1>
 </div>
     );

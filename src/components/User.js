@@ -14,9 +14,9 @@ function User (){
       },
       [userId]
     )
-    return(
-<div>    
-  <h1 className="listing-title"> {JSON.stringify(user.data)}
+    return user.data && (
+<div>
+  <h1 className="listing-title"> {user.data.id}
 
 </h1>
 </div>
