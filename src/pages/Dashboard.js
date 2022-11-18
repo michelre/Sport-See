@@ -7,10 +7,11 @@ import User from '../components/User';
 function Dashboard() {
 return(
   <div>
+     <User/>
     <Performance/>
     <Activity/>
     <Average/>
-    <User/>
+   
   </div>
 )
 }

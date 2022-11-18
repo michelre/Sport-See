@@ -14,9 +14,9 @@ function Average (){
       },
       [userId]
     )
-    return(
+    return average.data && (
 <div>    
-  <h1 className="listing-titgle"> {JSON.stringify(average.sessions)}
+  <h1 className="listing-titgle"> 
 </h1>
 </div>
     );
