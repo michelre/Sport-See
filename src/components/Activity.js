@@ -14,7 +14,7 @@ import {
 function Activity (){
     const [activity, setActivity] = useState({})
     let {userId} = useParams()
-   console.log(activity)
+   console.log(activity.data)
     useEffect(() => {
         const api = new Api();
         api.getActivity(userId).then((data) => {
@@ -27,8 +27,10 @@ function Activity (){
         return ''
     }
     return(
-<div>    
+<div>   
+  <h1 className='dailyActivity'>Activité quotidienne</h1>
 <BarChart
+title='Activité Quotidienne'
       width={500}
       height={300}
       data={activity.data.sessions}
@@ -41,14 +43,17 @@ function Activity (){
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="day" />
-      <YAxis />
+      <YAxis/>
       <Tooltip />
-      <Legend />
-      <Bar dataKey="kilogram" fill="#8884d8" />
-      <Bar dataKey="calories" fill="#82ca9d" />
+      <Legend verticalAlign="top" height={36}/>
+      <Bar name="Poids (kg)" 
+      dataKey="kilogram" fill="#282D30" />
+      <Bar name="Calories brûlées (kCal)" dataKey="calories" fill="#E60000" />
     </BarChart>
   ;
+
 </div>
+
     );
 }
 

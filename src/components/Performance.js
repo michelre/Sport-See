@@ -39,7 +39,6 @@ function Performance (){
       <PolarAngleAxis dataKey="kind" />
       <PolarRadiusAxis />
       <Radar
-        name="Mike"
         dataKey="value"
         stroke="#8884d8"
         fill="#8884d8"
