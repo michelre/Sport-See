@@ -16,3 +16,7 @@
   transform: rotate(180deg);
 
 }
+
+.rightSideInfos_container img{
+width: 60px;
+}
