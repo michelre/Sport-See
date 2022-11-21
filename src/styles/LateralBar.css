@@ -1,0 +1,18 @@
+.lateralBar{
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    background-color: black;
+}
+
+.lateralBar .logo{
+    margin-bottom: 15px;
+}
+
+.lateralBar p{
+    color: white;
+    text-orientation: mixed;
+  writing-mode: vertical-rl; 
+  transform: rotate(180deg);
+
+}

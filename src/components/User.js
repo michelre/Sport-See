@@ -6,6 +6,7 @@ import caloriesIcon from '../assets/caloriesIcon.png'
 import fatIcon from '../assets/fatIcon.png'
 import carbsIcon from '../assets/carbsIcon.png'
 import proteinIcon from '../assets/proteinIcon.png'
+import '../styles/Users.css'
 
 
 function User (){

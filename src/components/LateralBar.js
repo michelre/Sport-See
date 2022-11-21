@@ -20,7 +20,9 @@ function LateralBar() {
       <Link className="logo" to="/">
         <img src={iconWeight} alt="icon"></img>
       </Link>  
-     
+     <p className='copyright'>
+     Copiryght, SportSee 2020
+     </p>
     </div>
   )
 }
