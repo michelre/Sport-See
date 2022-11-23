@@ -8,13 +8,13 @@ import User from '../components/User';
 function Dashboard() {
 return(
   <div>
-    <Header/>
-    <LateralBar/>
-     <User/>
+      {/*<Header/>
+    <LateralBar/>*/}
+    <User/>
     <Performance/>
     <Activity/>
     <Average/>
-   
+
   </div>
 )
 }
