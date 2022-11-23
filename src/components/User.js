@@ -10,9 +10,10 @@ import '../styles/Users.css'
 
 
 function User (){
-    const [user, setUser] = useState({})
+    
+    const [user, setUser] = useState([])
     let {userId} = useParams()
-    console.log(user)
+    console.log(user.data)
     useEffect(() => {
         const api = new Api();
         api.getUser(userId).then((data) => {
@@ -23,7 +24,7 @@ function User (){
       [userId],[]
     )
     return user.data &&( 
-<div>    
+<div className='piechart'>    
 <h1> Bonjour {user.data.userInfos.firstName}<br/>
 Félicitation ! Vous avez explosé vos objectifs hier 👏</h1>
 <RadialBarChart width={200} height={200} data={user.data.todayScore}>
