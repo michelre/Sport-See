@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
-import Api from '../api/api'
+import Api from '../api'
 import {
     BarChart,
     Bar,

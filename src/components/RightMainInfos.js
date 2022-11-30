@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import Api from '../api/api'
+import Api from '../api'
 import caloriesIcon from '../assets/caloriesIcon.png'
 import fatIcon from '../assets/fatIcon.png'
 import carbsIcon from '../assets/carbsIcon.png'

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
-import Api from '../api/api'
+import Api from '../api'
 import '../styles/Average.css'
 import '../styles/CustomRecharts.css'
 import {
@@ -13,6 +13,16 @@ import {
 import { CustomTooltipAverage } from './CustomRecharts'
 import PropTypes from 'prop-types'
 
+const days = {
+    1: 'L',
+    2: 'M',
+    3: 'M',
+    4: 'J',
+    5: 'V',
+    6: 'S',
+    7: 'D'
+}
+
 
 function Average() {
     const [sessions, setSessions] = useState([])
@@ -20,7 +30,10 @@ function Average() {
     useEffect(() => {
         const api = new Api()
         api.getAverageSessions(userId).then((data) => {
-            setSessions(data.data.sessions)
+            const sessions = data.data.sessions.map((s) => {
+                return {...s, day: days[s.day]}
+            })
+            setSessions(sessions)
         })
     }, [userId])
 

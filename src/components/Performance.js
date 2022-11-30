@@ -9,7 +9,7 @@ import {
     ResponsiveContainer,
 } from 'recharts'
 import '../styles/Performance.css'
-import Api from '../api/api'
+import Api from '../api'
 
 import PropTypes from 'prop-types'
 

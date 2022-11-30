@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import { PieChart, ResponsiveContainer, Pie, Cell } from 'recharts'
-import Api from '../api/api'
+import Api from '../api'
 import '../styles/Users.css'
 import PropTypes from 'prop-types'
 
